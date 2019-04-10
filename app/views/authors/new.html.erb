@@ -1,4 +1,8 @@
 <h2>Create an Author</h2>
+<% if @errors %>
+  <%= errors.map {|e| e } %>
+<% end %>
+
 <%= form_tag authors_path, method: "post" do %>
   <div class="field">
     <%= label_tag "name", "Name" %>
